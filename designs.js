@@ -35,7 +35,7 @@ function makeGrid() {
 
 	}
 
-	$('table').on('click', function () {
+	$('td').on('click', function () {
 
 		if (event.target.style.backgroundColor) {
 
