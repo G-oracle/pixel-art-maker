@@ -21,6 +21,7 @@ console.log(height.value);
 console.log(width.value);
 
 function makeGrid() {
+	$('tr').remove();
 
 	for(let r = 0; r < height.value; r++){
 
@@ -34,11 +35,19 @@ function makeGrid() {
 
 	}
 
-	$('table').on('click', function(){
+	$('table').on('click', function () {
 
-       $(event.target).css('background-color', color.value);
+		if (event.target.style.backgroundColor) {
 
-});
+			$(event.target).css('background-color', '');
+
+		} else {
+
+			$(event.target).css('background-color', color.value);
+
+		}
+
+	});
 
 }
 
